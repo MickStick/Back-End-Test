@@ -8,8 +8,8 @@ When getting all orders filtered by a property, the orders are not being filtere
 For query params you will want to assume `filterProperty` is "name" and `filterValue` is "Additional Topping".
 
 ### Dev Notes / Response
-
-
+- Updated filter value with a conditional against the filterValue check which would return the filterd list
+  _(Time Taken 15 mins)_
 ---
 
 
@@ -31,8 +31,9 @@ I calculated that the total should be $74.23 but I'm getting $51.28. Because tha
 All items ordered (and more) can be referenced in lib/orders.js
 
 ### Dev Notes / Response
+- update total in which the total price is a total of the product of the items price and quantity
 
-
+  _(Time taken 10 mins)_
 ---
 
 
@@ -43,8 +44,11 @@ When getting updating an order I expect to only have to pass what has changed. H
 Additionally, when updating the items ordered, the total is not updating.
 
 ### Dev Notes / Response
+- Added checks for request body arguments, check if they were defined and add them to the updated order accordingly
+- update total in which the total price is a total of the product of the items price and quantity
+- Update order total, if items were passed then set as the total of the items else use the current total on the order
 
-
+  _(Time taken 5 mins)_
 ---
 
 
@@ -53,9 +57,13 @@ Additionally, when updating the items ordered, the total is not updating.
 When  I delete an order, the order that gets deleted is never the one I expect. I know we recently changed how we are doing our deletes so I'm not sure everything got updated. But when I delete a specific order, that's usually not the one that gets deleted. Unless I delete it immediately.
 
 ### Dev Notes / Response
+- There's an undefied varibles being used to check against the orders when deleting. Removed that variable and used the correct one.
 
+  _(Time Taken 2 mins)_
 
 ---
 
 
 ## Other
+- Added a start script
+- for filtering, I added a check for if the field to check is defined

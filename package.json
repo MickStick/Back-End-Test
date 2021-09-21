@@ -7,7 +7,8 @@
     "scripts": {
         "lint": "eslint .",
         "test": "echo \"no tests yet\"",
-        "start": "node index.js"
+        "start": "node index.js",
+        "debug": "nodemon"
     },
     "dependencies": {
         "koa": "^2.13.1",

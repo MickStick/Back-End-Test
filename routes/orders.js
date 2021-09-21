@@ -11,7 +11,7 @@ ordersRouter.post('/', async ctx => {
         ctx.throw(409, 'No items ordered')
     }
     
-    const total = items.reduce((orderTotal, item) => orderTotal += item.price, 0)
+    const total = items.reduce((orderTotal, item) => orderTotal += (item.price * item.quantity), 0)
     const order = {
         id: uuid(),
         customerName,
@@ -62,10 +62,13 @@ ordersRouter.put('/:id', async ctx => {
         ctx.throw(404, 'Could not find order');
     }
 
+    const price = items ? items.reduce((orderTotal, item) => orderTotal += (item.price * item.quantity), 0) : order.total;
+
     const updated = {
         ...order,
-        customerName,
-        items
+        customerName: customerName ? customerName : order.customerName,
+        items: items ? items : order.items,
+        price
     }
 
     ctx.status = 200;

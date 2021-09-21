@@ -43,8 +43,10 @@ When getting updating an order I expect to only have to pass what has changed. H
 Additionally, when updating the items ordered, the total is not updating.
 
 ### Dev Notes / Response
+- Added checks for request body arguments, check if they were defined and add them to the updated order accordingly
+- Update order total, if items were passed then set as the toal of items else use the current total on the order
 
-
+  _(Time taken 5 mins)_
 ---
 
 

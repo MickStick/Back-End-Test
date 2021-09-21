@@ -9,7 +9,7 @@ For query params you will want to assume `filterProperty` is "name" and `filterV
 
 ### Dev Notes / Response
 - Updated filter value with a conditional against the filterValue check which would return the filterd list
-  _(Time Taken 20 mins)_
+  _(Time Taken 15 mins)_
 ---
 
 
@@ -33,7 +33,7 @@ All items ordered (and more) can be referenced in lib/orders.js
 ### Dev Notes / Response
 - update total in which the total price is a total of the product of the items price and quantity
 
-  _(Time taken 15 mins)_
+  _(Time taken 10 mins)_
 ---
 
 

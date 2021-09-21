@@ -31,8 +31,9 @@ I calculated that the total should be $74.23 but I'm getting $51.28. Because tha
 All items ordered (and more) can be referenced in lib/orders.js
 
 ### Dev Notes / Response
+- update total in which the total price is a total of the product of the items price and quantity
 
-
+  _(Time taken 15 mins)_
 ---
 
 
@@ -44,7 +45,8 @@ Additionally, when updating the items ordered, the total is not updating.
 
 ### Dev Notes / Response
 - Added checks for request body arguments, check if they were defined and add them to the updated order accordingly
-- Update order total, if items were passed then set as the toal of items else use the current total on the order
+- update total in which the total price is a total of the product of the items price and quantity
+- Update order total, if items were passed then set as the total of the items else use the current total on the order
 
   _(Time taken 5 mins)_
 ---
@@ -55,7 +57,9 @@ Additionally, when updating the items ordered, the total is not updating.
 When  I delete an order, the order that gets deleted is never the one I expect. I know we recently changed how we are doing our deletes so I'm not sure everything got updated. But when I delete a specific order, that's usually not the one that gets deleted. Unless I delete it immediately.
 
 ### Dev Notes / Response
+- There as n undefied varibles being used to check against the orders when deleting. Removed that variable and used the correct one.
 
+  _(Time Taken 2 mins)_
 
 ---
 

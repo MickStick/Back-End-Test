@@ -57,7 +57,7 @@ Additionally, when updating the items ordered, the total is not updating.
 When  I delete an order, the order that gets deleted is never the one I expect. I know we recently changed how we are doing our deletes so I'm not sure everything got updated. But when I delete a specific order, that's usually not the one that gets deleted. Unless I delete it immediately.
 
 ### Dev Notes / Response
-- There as n undefied varibles being used to check against the orders when deleting. Removed that variable and used the correct one.
+- There's an undefied varibles being used to check against the orders when deleting. Removed that variable and used the correct one.
 
   _(Time Taken 2 mins)_
 

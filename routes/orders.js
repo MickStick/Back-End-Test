@@ -31,7 +31,7 @@ ordersRouter.get('/', async ctx => {
 
     if (filterProperty && filterValue) {
         const filteredResults = ordersData.filter(({ items }) => 
-            items.filter(item => item[filterProperty].includes(filterValue))
+            items.filter(item => item[filterProperty] && item[filterProperty].includes(filterValue)).length > 0
         )
         results = filteredResults;
     }

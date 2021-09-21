@@ -8,8 +8,8 @@ When getting all orders filtered by a property, the orders are not being filtere
 For query params you will want to assume `filterProperty` is "name" and `filterValue` is "Additional Topping".
 
 ### Dev Notes / Response
-
-
+- Updated filter value with a conditional against the filterValue check which would return the filterd list
+  _(Time Taken 20 mins)_
 ---
 
 
@@ -59,3 +59,5 @@ When  I delete an order, the order that gets deleted is never the one I expect. 
 
 
 ## Other
+- Added a start script
+- for filtering, I added a check for if the field to check is defined
